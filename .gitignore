@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/.quarto/
+**/*.quarto_ipynb
+.edge-test/
+shinylive-check.png
+.edge-shiny-test/
+shinylive-check-*.png
+.edge-cover-test/
+cover-check.png
+.edge-graph-test/
+graph-check-*.png
+original_modelos_continuos.*
