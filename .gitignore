@@ -13,4 +13,6 @@ shinylive-check-*.png
 cover-check.png
 .edge-graph-test/
 graph-check-*.png
+.edge-pages-test/
+github-pages-check.png
 original_modelos_continuos.*

@@ -1,23 +1,23 @@
 # Modelos continuos
 
-Proyecto Quarto en R sobre modelos continuos: normal, ji-cuadrado, t de Student, F de Fisher y Teorema del Límite Central.
+Proyecto Quarto en R sobre modelos continuos: normal, ji-cuadrado, t de Student, F de Fisher y Teorema del Limite Central.
 
-El documento principal es `modelos_continuos.qmd`. Incluye una app interactiva al final de la página, en la sección **Laboratorio interactivo**. La app está convertida con Shinylive, por lo que puede funcionar en GitHub Pages sin un servidor de R.
+La pagina principal del sitio es `index.html`. El documento fuente es `modelos_continuos.qmd` y tambien se conserva `modelos_continuos.html` como salida directa del render. La app interactiva aparece al final de la pagina, en la seccion **Laboratorio interactivo**. La app esta convertida con Shinylive, por lo que funciona en GitHub Pages sin servidor de R.
 
 ## Requisitos
 
 - R 4.5 o superior
 - Quarto
 - Paquetes de R: `ggplot2`, `shiny` y `shinylive`
-- Extensión Quarto: `quarto-ext/shinylive`
+- Extension Quarto: `quarto-ext/shinylive`
 
-Puedes instalarlos con:
+Instalacion de paquetes:
 
 ```r
 install.packages(c("ggplot2", "shiny", "shinylive"))
 ```
 
-La extensión se instala con:
+Instalacion de la extension:
 
 ```powershell
 quarto add quarto-ext/shinylive
@@ -25,7 +25,7 @@ quarto add quarto-ext/shinylive
 
 ## Ejecutar localmente
 
-Para revisar la página localmente:
+Para revisar la pagina localmente:
 
 ```powershell
 quarto preview modelos_continuos.qmd
@@ -37,10 +37,25 @@ Para generar el HTML:
 quarto render modelos_continuos.qmd
 ```
 
+Despues de renderizar, si quieres que GitHub Pages abra directamente la pagina en la raiz del sitio, copia la salida a `index.html`:
+
+```powershell
+Copy-Item modelos_continuos.html index.html -Force
+```
+
 ## Publicar en GitHub Pages
 
-El repositorio puede subirse completo a GitHub con el `.qmd`, el HTML generado, `index.html`, `modelos_continuos_files/`, `_extensions/`, `shinylive-sw.js`, las imágenes y `.nojekyll`.
+El repositorio debe subirse completo a GitHub con estos archivos y carpetas:
 
-`index.html` redirige automáticamente a `modelos_continuos.html`, por lo que GitHub Pages abrirá la página principal al entrar a la URL del sitio.
+- `index.html`
+- `modelos_continuos.html`
+- `modelos_continuos.qmd`
+- `modelos_continuos_files/`
+- `_extensions/`
+- `shinylive-sw.js`
+- `Logo_UT.png` y `Logo_UT_monograma.png`
+- `.nojekyll`
 
-La app del laboratorio usa Shinylive: se ejecuta dentro del navegador con WebAssembly/webR, así que puede ser interactiva en GitHub Pages.
+GitHub Pages debe configurarse desde la rama `main`, carpeta raiz `/`.
+
+La app del laboratorio usa Shinylive: se ejecuta dentro del navegador con WebAssembly/webR, asi que puede ser interactiva en GitHub Pages.
